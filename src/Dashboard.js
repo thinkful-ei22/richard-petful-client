@@ -1,13 +1,12 @@
 import React from 'react';
 import Pet from './components/Pet';
+import PetForm from './components/PetForm';
 import { connect } from 'react-redux';
 import { fetchAnimal, adpotAnimal } from './actions';
 
 
 export class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   componentDidMount() {
     console.log('mounted');
     this.props.dispatch(fetchAnimal('cat'));
@@ -21,12 +20,15 @@ export class Dashboard extends React.Component {
     console.log('cat has been adopted');
     this.props.dispatch(adpotAnimal('cat'));
   }
+  submit(values) {
+    console.log(values);
+  }
   render() {
     return(
       <main className='dashboard'>
-        <h1>PETFUL-APP</h1>
-        <Pet petToAdopt={this.props.cat} onAdopt={() => this.onAdoptCat()} />  
-        <Pet petToAdopt={this.props.dog} onAdopt={() => this.onAdoptDog()}/>
+        <Pet petToAdopt={this.props.cat} species={'cat'} onAdopt={() => this.onAdoptCat()} />  
+        <Pet petToAdopt={this.props.dog} species={'dog'} onAdopt={() => this.onAdoptDog()}/>
+        <PetForm onSubmit={this.submit}/>
       </main>
     );
   }

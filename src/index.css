@@ -8,18 +8,27 @@ body {
 .dashboard {
   display: inline-block;
   width: 100%;
-  /* display: grid;
+  display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'petToAdopt petToAdopt';
-  grid-template-columns: repeat(2, 1fr); */
+  grid-template-areas: 'cat dog';
+  grid-template-columns: repeat(2, .4fr);
 }
 
 .petToAdopt {
   width: 100%;
   height: 1fr;
-  /* grid-area: petToAdopt;
-  font-size: 1.5rem;
-  border: 3px solid black; */
+}
+
+.cat {
+  grid-area: cat;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.dog {
+  grid-area: dog;
+  border: 2px solid black;
+  padding: 10px;
 }
 
 img {
@@ -34,5 +43,6 @@ button {
   margin-bottom: .3rem;
 }
 button:hover{
-  border: 3px solid black;
+  background-color: red;
+  color: white;
 }

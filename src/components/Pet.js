@@ -7,7 +7,7 @@ export default function Pet(props) {
     </div>;
   }
   return (
-    <section className='petToAdopt'>
+    <section className={`petToAdopt ${props.species}`}>
       <header>
         <h2>{props.petToAdopt.name}</h2>
         <img src={props.petToAdopt.imageURL} alt={props.petToAdopt.imageDescription}/>
