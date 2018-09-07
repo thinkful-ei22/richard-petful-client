@@ -4,14 +4,16 @@ body {
   font-family: sans-serif;
   width: 100%
 }
-
+main {
+  padding: 10px;
+}
 .dashboard {
   display: inline-block;
   width: 100%;
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'cat dog';
-  grid-template-columns: repeat(2, .4fr);
+  grid-template-areas: 'cat dog' 'form form';
+  grid-template-columns: repeat(2, .45fr);
 }
 
 .petToAdopt {
@@ -36,13 +38,53 @@ img {
   max-width: 300px;
   height: auto;
 }
+
 button {
   display: block;
   padding: .5rem 1rem;
   border: 1px solid black;
   margin-bottom: .3rem;
 }
+
 button:hover{
   background-color: red;
   color: white;
 }
+/* 
+.petForm {
+  grid-area: form;
+  padding: 30px;
+  width: 100%;
+}
+.petForm div {
+  margin: 10px auto;
+}
+.petForm input, .petForm textarea{
+  height: 2rem;
+  width: 60%;
+  resize: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+} */
+
+/* .name {
+  grid-area: name;
+}
+.sex {
+  grid-area: sex;
+}
+.img {
+  grid-area: img;
+}
+.imgDesc {
+  grid-area: imgDesc;
+}
+.age {
+  grid-area: age;
+}
+.breed {
+  grid-area: breed;
+}
+.story {
+  grid-area: story;
+} */

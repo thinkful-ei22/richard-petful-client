@@ -28,7 +28,7 @@ export class Dashboard extends React.Component {
       <main className='dashboard'>
         <Pet petToAdopt={this.props.cat} species={'cat'} onAdopt={() => this.onAdoptCat()} />  
         <Pet petToAdopt={this.props.dog} species={'dog'} onAdopt={() => this.onAdoptDog()}/>
-        <PetForm onSubmit={this.submit}/>
+        {/* <PetForm onSubmit={this.submit}/> */}
       </main>
     );
   }
