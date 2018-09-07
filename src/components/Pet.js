@@ -1,7 +1,11 @@
 import React from 'react';
 
 export default function Pet(props) {
-  
+  if (!props.petToAdopt) {
+    return <div>
+      loading...
+    </div>;
+  }
   return (
     <section className='petToAdopt'>
       <header>
