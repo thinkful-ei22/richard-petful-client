@@ -1,7 +1,7 @@
 import React from 'react';
 import Pet from './components/Pet';
 import { connect } from 'react-redux';
-import { fetchCat, fetchDog, adpotDog, adpotCat } from './actions';
+import { fetchAnimal, adpotAnimal } from './actions';
 
 
 export class Dashboard extends React.Component {
@@ -10,31 +10,32 @@ export class Dashboard extends React.Component {
   }
   componentDidMount() {
     console.log('mounted');
-    this.props.dispatch(fetchCat());
-    this.props.dispatch(fetchDog());
+    this.props.dispatch(fetchAnimal('cat'));
+    this.props.dispatch(fetchAnimal('dog'));
   }
   onAdoptDog() {
     console.log('dog has been adopted');
-    this.props.dispatch(adpotDog());
+    this.props.dispatch(adpotAnimal('dog'));
   }
   onAdoptCat() {
     console.log('cat has been adopted');
-    this.props.dispatch(adpotCat());
+    this.props.dispatch(adpotAnimal('cat'));
   }
   render() {
     return(
-      <div>
+      <main className='dashboard'>
+        <h1>PETFUL-APP</h1>
         <Pet petToAdopt={this.props.cat} onAdopt={() => this.onAdoptCat()} />  
         <Pet petToAdopt={this.props.dog} onAdopt={() => this.onAdoptDog()}/>
-      </div>
+      </main>
     );
   }
 }
 
 const mapStateToProps = (state, props) => {
   return ({
-    cat: state.cat.data,
-    dog: state.dog.data,
+    cat: state.animal.catData,
+    dog: state.animal.dogData,
   });
 };
 

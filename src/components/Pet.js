@@ -12,15 +12,19 @@ export default function Pet(props) {
         <h2>{props.petToAdopt.name}</h2>
         <img src={props.petToAdopt.imageURL} alt={props.petToAdopt.imageDescription}/>
       </header>
-      <main>
+      <div>
         <dl>
-          <dt>{props.petToAdopt.sex}</dt>
-          <dt>{props.petToAdopt.age}</dt>
-          <dt>{props.petToAdopt.breed}</dt>
-          <dt>{props.petToAdopt.story}</dt>
+          <dt>Gender:</dt>
+          <dd>{props.petToAdopt.sex}</dd>
+          <dt>Age:</dt>
+          <dd>{props.petToAdopt.age}</dd>
+          <dt>Breed:</dt>
+          <dd> {props.petToAdopt.breed}</dd>
+          <dt>Story:</dt>
+          <dd>{props.petToAdopt.story}</dd>
         </dl>
         <button onClick={props.onAdopt}>Adopt</button>
-      </main>
+      </div>
     </section>
   );
 }

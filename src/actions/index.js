@@ -1,8 +1,10 @@
-import {FETCH_CAT_REQUEST, FETCH_CAT_SUCCESS, FETCH_CAT_ERROR, fetchCat, adpotCat} from '../actions/cat';
-import {FETCH_DOG_REQUEST, FETCH_DOG_SUCCESS, FETCH_DOG_ERROR, fetchDog, adpotDog} from '../actions/dog';
+import {FETCH_CAT_REQUEST, FETCH_CAT_SUCCESS, FETCH_CAT_ERROR, fetchCat, adpotCat} from './cat';
+import {FETCH_DOG_REQUEST, FETCH_DOG_SUCCESS, FETCH_DOG_ERROR, fetchDog, adpotDog} from './dog';
+import {FETCH_ANIMAL_REQUEST, FETCH_ANIMAL_SUCCESS, FETCH_ANIMAL_ERROR, fetchAnimal, adpotAnimal} from './animal';
 
 
 export {
   FETCH_CAT_REQUEST, FETCH_CAT_SUCCESS, FETCH_CAT_ERROR, fetchCat, adpotCat,
-  FETCH_DOG_REQUEST, FETCH_DOG_SUCCESS, FETCH_DOG_ERROR, fetchDog, adpotDog
+  FETCH_DOG_REQUEST, FETCH_DOG_SUCCESS, FETCH_DOG_ERROR, fetchDog, adpotDog,
+  FETCH_ANIMAL_REQUEST, FETCH_ANIMAL_SUCCESS, FETCH_ANIMAL_ERROR, fetchAnimal, adpotAnimal
 };
